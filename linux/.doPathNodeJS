@@ -1,0 +1,29 @@
+#
+# set PATH for NODEJS install dir
+#  note: if the version isnt v12.13.1-linux-x64 we does review the install them
+#    en mi caso he instaldo la v12.13.1 bajada de nodejs.org en el 
+#
+#    paquete 
+#
+#      node-v12.13.1-linux-x64, and untar with: 
+#
+#      $ mkdir /var/nodejs & untar with tar xjvf node-v12.13.1-linux-x64 
+#
+#
+NODEDIRINSTALL="/var/nodejs/node-v"
+#echo $NODEDIRINSTALL
+if [ -d $NODEDIRINSTALL* ] ; then
+  NODEJS=`echo $NODEDIRINSTALL*` 
+  echo " incluyendo part de nodejs: $NODEJS"
+  echo
+  echo "  dir de node $NODEJS agregado a PATH"
+  echo
+  echo "  $NODEJS/bin:"
+  echo "        + "
+  echo "  $PATH" 
+  echo
+  #echo "  =>  $NODEJS/bin:$PATH"
+  export PATH="$NODEJS/bin:$PATH"
+  echo "  =>  $PATH"
+fi
+

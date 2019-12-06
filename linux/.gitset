@@ -1,0 +1,2 @@
+git config --local --add user.name $1 
+git config --local --add user.email $2 
